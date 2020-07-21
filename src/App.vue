@@ -1,0 +1,39 @@
+<template>
+  <div id="app" class="container">
+    <Score />
+    <NinjaCards />
+    <Activities />
+  </div>
+</template>
+
+<script>
+import NinjaCards from '@/components/NinjaCards.vue'
+import Score from '@/components/Score.vue'
+import Activities from '@/components/Activities.vue'
+import store from '@/store.js'
+
+export default {
+  name: 'App',
+  data() {
+    return store.state
+  },
+  components: {
+    NinjaCards,
+    Score,
+    Activities
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #000000;
+  margin: auto;
+  padding: 10px;
+  width: 1080px;
+}
+</style>
