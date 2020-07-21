@@ -2,9 +2,9 @@
   <div class="row my-3">
     <div class="col-12">
         <div class="card">
-            <h4 class="card-header">Your Gold</h4>
+            <h5 class="card-header">Your Gold</h5>
             <div class="card-body">
-              <h4>{{ gold }}</h4>
+              <h5>{{ gold }}</h5>
             </div>
         </div>
     </div>

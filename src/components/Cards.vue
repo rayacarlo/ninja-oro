@@ -4,7 +4,7 @@
             <img :src="require('@/assets/img/' + pic + '.jpg')" class="card-img-top">
             <h5 class="card-title mt-4">{{ title }}</h5>
             <p class="card-text">You could earn between {{ min }} and {{ max }} golds</p>
-            <a href="#" class="btn btn-warning" @click="increase">Find gold!</a>
+            <a href="#" class="btn btn-outline-dark" @click="increase">Find gold!</a>
         </div>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
           const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit', hour12: true};
           const time =  date.toLocaleDateString("en-US", options);
           store.increase(Random);
-          store.addActivity(`You earn ${Random} total golds, ${time}`)
+          store.addActivity(`You earn ${Random} total golds from the ${this.title}, ${time}`)
       }
   }
 }
