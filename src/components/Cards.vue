@@ -24,8 +24,11 @@ export default {
       increase: function(ev){
           ev.preventDefault();
           const Random = Math.floor(Math.random() * (this.max - this.min)) + this.min;
+          const date = new Date();
+          const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit', hour12: true};
+          const time =  date.toLocaleDateString("en-US", options);
           store.increase(Random);
-          store.addActivity(`You earn ${Random} total golds`)
+          store.addActivity(`You earn ${Random} total golds, ${time}`)
       }
   }
 }

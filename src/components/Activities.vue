@@ -5,7 +5,8 @@
             <h5 class="card-header">Activities</h5>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item" v-for="(activity, i) in activities" v-bind:key="i">{{ activity }}</li>
+                  <li class="list-group-item" v-for="(activity, i) in activities" v-bind:key="i">{{ activity }}
+                  <span class="close" @click="$delete(activities, i)">x</span></li>
                 </ul>
             </div>
         </div>
@@ -23,3 +24,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: #bbb;}
+</style>
