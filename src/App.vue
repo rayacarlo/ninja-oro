@@ -3,6 +3,7 @@
     <Score />
     <NinjaCards />
     <Activities />
+    <Reset />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import NinjaCards from '@/components/NinjaCards.vue'
 import Score from '@/components/Score.vue'
 import Activities from '@/components/Activities.vue'
+import Reset from '@/components/Reset.vue'
 import store from '@/store.js'
 
 export default {
@@ -20,7 +22,8 @@ export default {
   components: {
     NinjaCards,
     Score,
-    Activities
+    Activities,
+    Reset
   }
 }
 </script>

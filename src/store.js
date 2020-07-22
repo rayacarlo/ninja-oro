@@ -8,5 +8,9 @@ export default {
     },
     addActivity: function(newActivity) {
         this.state.activities = [...this.state.activities, newActivity]
+    },
+    resetAll() {
+        this.state.gold = 0,
+        this.state.activities = [""]
     }
 }
