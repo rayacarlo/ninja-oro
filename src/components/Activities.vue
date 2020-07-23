@@ -5,7 +5,7 @@
             <h5 class="card-header">Activities</h5>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item" v-for="(activity, i) in activities" v-bind:key="i">{{ activity }}
+                  <li class="list-group-item" v-bind:class="{ 'text-success' : activity.value > 0, 'text-danger' : activity.value < 0 }" v-for="(activity, i) in activities" v-bind:key="i">{{ activity.text }}
                   <span class="close" @click="$delete(activities, i)">x</span></li>
                 </ul>
             </div>
