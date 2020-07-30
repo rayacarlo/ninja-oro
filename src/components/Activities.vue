@@ -15,12 +15,10 @@
 </template>
 
 <script>
-import store from '@/store.js'
-
 export default {
   name: 'Activities',
   data: function() {
-    return store.state
+    return this.$store.state
   }
 }
 </script>

@@ -12,12 +12,11 @@ import NinjaCards from '@/components/NinjaCards.vue'
 import Score from '@/components/Score.vue'
 import Activities from '@/components/Activities.vue'
 import Reset from '@/components/Reset.vue'
-import store from '@/store.js'
 
 export default {
   name: 'NinjaOro',
   data() {
-    return store.state
+    return this.$store.state
   },
   components: {
     NinjaCards,

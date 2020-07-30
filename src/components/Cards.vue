@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import store from '@/store.js'
-
 export default {
   name: 'Cards',
   props: {
@@ -28,8 +26,8 @@ export default {
           const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit', hour12: true};
           const time =  date.toLocaleDateString("en-US", options);
           const textlist = `You earn ${Random} total golds from the ${this.title}, ${time}`;
-          store.increase(Random);
-          store.addActivity({text: textlist, value: Random})
+          this.$store.commit("increase", Random);
+          this.$store.commit("addActivity", {text: textlist, value: Random})
       }
   }
 }

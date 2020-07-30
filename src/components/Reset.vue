@@ -11,15 +11,13 @@
 </template>
 
 <script>
-import store from '@/store.js'
-
 export default {
   name: 'Reset',
   methods: {
     reset: function(ev){
       ev.preventDefault;
       if (window.confirm("Do you really want to reset?")) { 
-        store.resetAll();
+        this.$store.commit("resetAll");
       }
     }
   }

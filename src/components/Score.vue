@@ -12,12 +12,10 @@
 </template>
 
 <script>
-import store from '@/store.js'
-
 export default {
   name: 'Score',
     data: function() {
-      return store.state
+      return this.$store.state
     }
   }
 </script>
