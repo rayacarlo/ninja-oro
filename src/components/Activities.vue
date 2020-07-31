@@ -21,10 +21,10 @@ export default {
     return this.$store.state
   },
   methods: {
-  removeElement(i) {
-    this.activities.splice(i, 1);
+    removeElement(i) {
+      this.$store.commit("removeActivity", i)
+    } 
   }
-}
 }
 </script>
 

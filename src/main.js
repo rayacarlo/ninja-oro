@@ -21,6 +21,10 @@ const store = new Vuex.Store({
     resetAll(state) {
       state.gold = 0,
       state.activities = []
+    },
+    removeActivity(state, i) {
+      state.gold = state.gold - state.activities[i].value
+      state.activities.splice(i, 1);
     }
   }
 })

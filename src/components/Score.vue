@@ -16,6 +16,11 @@ export default {
   name: 'Score',
     data: function() {
       return this.$store.state
-    }
+    },
+  methods: {
+    removeElement(i) {
+      this.$store.commit("removeActivity", i)
+    } 
+  }
   }
 </script>
