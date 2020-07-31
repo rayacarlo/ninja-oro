@@ -20,7 +20,7 @@ const store = new Vuex.Store({
     },
     resetAll(state) {
       state.gold = 0,
-      state.activities = [""]
+      state.activities = []
     }
   }
 })
